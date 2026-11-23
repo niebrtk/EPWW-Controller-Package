@@ -280,12 +280,6 @@ MAP:P-R LABELS
 FOLDER:EPWW MISC
 ACTIVE:1
 COLOR:Active_Map_Type_1
-// Master switch for the P/R labels below. Each label shows while its area is active
-// (TopSkyAreas.txt) and the screen is zoomed in past the first ZOOM value of that label.
-// A label sits inside its area when it fits. If it does not fit yet, it sits beside the area
-// ("<area> LABEL", hidden again by the negative ZOOM) and moves inside once it fits ("<area> LABEL INSIDE").
-// Label format: area name / UPPER/LOWER, F = flight level, A = altitude AMSL (hundreds of ft).
-// Generated from the eAIP together with TopSkyAreas.txt; regenerate rather than editing by hand.
 
 MAP:EPP1 LABEL
 FOLDER:EPWW MISC
@@ -1305,7 +1299,6 @@ MAP:P-R OUTLINES (NO AREAS FILE)
 FOLDER:EPWW MISC
 HIDDEN
 ACTIVE:AREA:*:EP[PR][0-9]+[A-Z]*
-// Shown only when none of the P/R areas of TopSkyAreas.txt is active (areas file missing).
 COLOR:Active_Map_Type_1
 STYLE:SOLID:2
 // EPP1
@@ -13655,8 +13648,6 @@ TEXT:N051.01.15.182:E016.39.15.575:T 130.625
 MAP:ACC NEIGHBOURS
 FOLDER:ACC SECTORS
 LAYER:4
-//Neighbouring ACC sector splits starting at the EPWW FIR border, to the first junction (max 100 NM); German lines (Bremen, Muenchen, Rhein) run on to the German FIR border. FIR borders omitted (drawn by the .sct).
-//Solid = lower / single-layer ACC (Bremen lower, Praha, Malmo, Copenhagen...), thin dark dotted = Berlin TMA outline and its internal splits, dashed = EDUU (Rhein UAC)
 //LOWER
 COLOR:ACC_NBR
 STYLE:Solid:2
@@ -20324,7 +20315,7 @@ LINE:N052.53.09.000:E012.05.58.028:N052.44.40.160:E011.11.40.933
 FILTER_ID_OFF
 
 
-//NEIGHBOUR SECTOR OWNERS - first online controller of each vertical layer (EPWW ESE ownership chains), top to bottom
+//NEIGHBOUR SECTOR OWNERS
 TEXTALIGN:CC
 //NBR ESAA 6/7 + ESAA NE of Bornholm (9/8)
 COLOR:ACC_OWNER
@@ -30470,7 +30461,7 @@ LINE:N051.28.18.000:E014.56.56.000:N051.30.42.000:E014.48.26.741
 LINE:N051.43.03.000:E017.14.17.000:N051.45.00.000:E017.40.42.000
 LINE:N051.45.00.000:E017.40.42.000:N051.47.01.000:E018.10.12.000
 
-//SHELF C/D/T - dashed: FL285-FL365 border (C wide) and FL365+ border (C narrow)
+//SHELF C/D/T
 COLOR:ACC_SHELF
 STYLE:ACC_SHELF:2
 LINE:N050.41.04.000:E018.27.11.000:N051.43.03.000:E017.14.17.000
@@ -30483,7 +30474,7 @@ COLOR:ACC_LABEL
 TEXTALIGN:CC
 FONTSIZE:-:2
 
-//SECTOR OWNERS - first online controller in the ESE ownership chain; ESAA style freq *ID; split into 365+ / 365- lines when upper and lower owners differ
+//SECTOR OWNERS
 COLOR:ACC_OWNER
 FONTSIZE:+:2
 //B
