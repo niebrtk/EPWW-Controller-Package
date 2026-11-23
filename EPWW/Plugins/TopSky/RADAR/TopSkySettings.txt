@@ -12,7 +12,7 @@ Color_Active_Map_Type_1=250,110,110
 Color_Active_Map_Type_2=230,155,85
 Color_Active_Map_Type_3=215,195,100
 Color_Active_Map_Type_4=182,128,104
-Color_Active_Map_Type_5=195,140,225
+Color_Active_Map_Type_5=240,175,50
 Color_Active_Map_Type_6=120,190,200
 Color_AIW_Intrusion=192,192,192
 Color_Arm=170,170,170
@@ -260,6 +260,7 @@ Track_PredictionLine_Max=0
 
 //Fonts
 Areas_Label_Font=EuroScope
+Areas_Label_Name=1,0
 Areas_Altitude_Filtering=0
 Window_ASM_Chars_Name=8
 Window_SAP_Chars_Area=8
